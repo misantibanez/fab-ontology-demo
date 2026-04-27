@@ -1,0 +1,11 @@
+expression 'DirectLake - OntologyLH' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/7f3d7df9-a6e1-4cc1-89e8-6bed6c28cc80/1b7861d8-68c0-4518-be38-b0e3662c4d4b", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 93fc9920-4216-4fc8-9706-d81a3d9760bb
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[freezer]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[freezertelemetry]"}},"objectType":"Table"}]
+

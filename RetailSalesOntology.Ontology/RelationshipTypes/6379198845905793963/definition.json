@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6379198845905793963",
+  "name": "factsales_has_dimstore",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "86311464994005"
+  },
+  "target": {
+    "entityTypeId": "64618003226941"
+  }
+}

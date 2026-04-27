@@ -1,0 +1,65 @@
+table dimstore
+	lineageTag: 02f7ffca-c040-4b2f-8d3b-20225278fdcc
+	sourceLineageTag: [dbo].[dimstore]
+
+	column StoreId
+		dataType: string
+		lineageTag: e59be4eb-f9f2-403d-82db-bbcb40bc4a1c
+		sourceLineageTag: StoreId
+		summarizeBy: none
+		sourceColumn: StoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreName
+		dataType: string
+		lineageTag: 20326292-a123-4b4e-beb9-e64e3083150a
+		sourceLineageTag: StoreName
+		summarizeBy: none
+		sourceColumn: StoreName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 74503023-0240-454a-b9cb-b72646888e4e
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 91110a22-4d88-4b10-a9a9-7dfb5ba594eb
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: string
+		lineageTag: 8079c75c-5103-4e22-a08f-0b494102e1f7
+		sourceLineageTag: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: string
+		lineageTag: 81e05add-c0f9-4d32-a5ab-ae5ec9a25276
+		sourceLineageTag: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimstore = entity
+		mode: directLake
+		source
+			entityName: dimstore
+			schemaName: dbo
+			expressionSource: 'DirectLake - OntologyLH'
+

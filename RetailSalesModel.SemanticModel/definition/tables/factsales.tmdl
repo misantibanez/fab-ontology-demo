@@ -1,0 +1,65 @@
+table factsales
+	lineageTag: 6420fdb2-1d16-4c1d-bd8e-37ac231d8f2b
+	sourceLineageTag: [dbo].[factsales]
+
+	column SaleId
+		dataType: string
+		lineageTag: 7522e9bd-25de-45e1-a886-ff59521067c1
+		sourceLineageTag: SaleId
+		summarizeBy: none
+		sourceColumn: SaleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SaleDate
+		dataType: string
+		lineageTag: 78edd6a2-a133-434c-8465-b258ac556175
+		sourceLineageTag: SaleDate
+		summarizeBy: none
+		sourceColumn: SaleDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreId
+		dataType: string
+		lineageTag: 06b96fc2-bf4c-468c-a8e5-486421500893
+		sourceLineageTag: StoreId
+		summarizeBy: none
+		sourceColumn: StoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: string
+		lineageTag: ac6daf30-4cb9-4472-8d10-c4571c55be32
+		sourceLineageTag: ProductId
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Units
+		dataType: string
+		lineageTag: 5a0d1a86-334a-4fbb-8798-eeeea63f1ccd
+		sourceLineageTag: Units
+		summarizeBy: none
+		sourceColumn: Units
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevenueUSD
+		dataType: string
+		lineageTag: 0c05226f-cdcc-4a7b-85a5-1caab8ef0a75
+		sourceLineageTag: RevenueUSD
+		summarizeBy: none
+		sourceColumn: RevenueUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factsales = entity
+		mode: directLake
+		source
+			entityName: factsales
+			schemaName: dbo
+			expressionSource: 'DirectLake - OntologyLH'
+
